@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script src="index.ts"></script>
+<div class="App">
+    <div class="component">
+        <button id="button" class="button" draggable="true" ondragstart="onDragStart(event)">button</button>
+        <div id="div" class="text" draggable="true" ondragstart="onDragStart(event)">text</div>
+        <img id="img" class="image" src="https://b.yzcdn.cn/vant/icon-demo-1126.png" alt="img"
+             draggable="true" ondragstart="onDragStart(event)"/>
+    </div>
+    <div class="left-divider"></div>
+    <div id="page" class="page" onclick="onElementClicked(event)" ondrop="onDrop(event)" ondragover="onDragOver(event)"></div>
+    <div class="right-divider"></div>
+    <div class="property">
+        <div>
+            width
+            <input onkeypress="onPropertyChanged(event)" id="width"/>
+            height
+            <input onkeypress="onPropertyChanged(event)" id="height"/>
+        </div>
+        <div>
+            top
+            <input onkeypress="onPropertyChanged(event)" id="top"/>
+            bottom
+            <input onkeypress="onPropertyChanged(event)" id="bottom"/>
+        </div>
+        <div>
+            left
+            <input onkeypress="onPropertyChanged(event)" id="left"/>
+            right
+            <input onkeypress="onPropertyChanged(event)" id="right"/>
+        </div>
+        <div>
+            text
+            <input onkeypress="onPropertyChanged(event)" id="text"/>
+            text-color
+            <input onkeypress="onPropertyChanged(event)" id="text-color"/>
+        </div>
+        <div>
+            background
+            <input onkeypress="onPropertyChanged(event)" id="background"/>
+            text-size
+            <input onkeypress="onPropertyChanged(event)" id="text-size"/>
+        </div>
+        <div>
+            src
+            <input onkeypress="onPropertyChanged(event)" id="src"/>
+            radius
+            <input onkeypress="onPropertyChanged(event)" id="radius"/>
+        </div>
+        <div>
+            horizontal-center
+            <input type="checkbox" onClick="onPropertyChanged(event)" id="horizontal-center"/>
+            vertical-center
+            <input type="checkbox" onClick="onPropertyChanged(event)" id="vertical-center"/>
+        </div>
+        <div>
+            <button onClick="generateCode()">GENERATE CODE</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .App {
+    }
+
+    .component {
+        width: 30vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .button {
+        width: 8%;
+        position: fixed;
+        top: 5%;
+        left: 1%;
+    }
+
+    .text {
+        width: 8%;
+        position: fixed;
+        text-align: center;
+        top: 5%;
+        left: 10%;
+    }
+
+    .image {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 5%;
+        left: 20%;
+    }
+
+    .left-divider {
+        width: 1px;
+        height: 100vh;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: 30vw;
+    }
+
+    .page {
+        width: 27vw;
+        height: 48vw;
+        border: 1px solid gray;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 2vw;
+        left: 35vw;
+        /*background: url(https://img.yzcdn.cn/vant/cat.jpeg);*/
+    }
+
+    .right-divider {
+        width: 1px;
+        height: 100vh;
+        background: gray;
+        position: fixed;
+        top: 0;
+        right: 33vw;
+    }
+
+    .property {
+        width: 30vw;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+    }
+</style>
